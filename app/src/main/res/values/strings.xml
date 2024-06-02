@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Denekabolo</string>
+    <string name="detected_price_name">Price View</string>
+    <string name="final_price_name">FullPrice View</string>
+    <string name="zipcode_name">Zip Code View</string>
+    <string name="taxrate_name">Tax Rate View</string>
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <CheckBox
+        android:id="@+id/tipCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/detectedPrice"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/tipTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add tip"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/tipCB"
+        app:layout_constraintTop_toTopOf="@id/tipCB"
+        />
+
+    <EditText
+        android:id="@+id/tipET"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/tipTV"
+        app:layout_constraintTop_toTopOf="@id/tipTV"
+        />
+
+    <CheckBox
+        android:id="@+id/CCFeesCB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/detectedPrice"
+        app:layout_constraintLeft_toRightOf="@id/tipET" />
+
+    <TextView
+        android:id="@+id/CCFeesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add CC Fees"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toRightOf="@id/CCFeesCB"
+        app:layout_constraintTop_toTopOf="@id/CCFeesCB"
+        />
+
+    <EditText
+        android:id="@+id/CCFeesET"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:textColor="@color/white"
+        android:background="@color/black"
+        app:layout_constraintLeft_toRightOf="@id/CCFeesTV"
+        app:layout_constraintTop_toTopOf="@id/CCFeesTV"
+        />
+
+    <TextView
+        android:id="@+id/detectedPrice"
+        android:gravity="right"
+        android:layout_width="fill_parent"
+        android:layout_height="100sp"
+        android:layout_marginTop="100sp"
+        android:text="@string/detected_price_name"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/finalPrice"
+        android:gravity="right"
+        android:layout_width="fill_parent"
+        android:layout_height="100sp"
+        android:layout_marginTop="100sp"
+        android:text="@string/final_price_name"
+        android:textSize="30sp"
+        android:textColor= "#00FF00"
+        app:layout_constraintTop_toTopOf="@id/detectedPrice"/>
+
+    <TextView
+        android:id="@+id/zipCode"
+        android:gravity="right"
+        android:layout_width="fill_parent"
+        android:layout_height="100sp"
+        android:layout_marginTop="100sp"
+        android:text="@string/zipcode_name"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/finalPrice" />
+
+    <TextView
+        android:id="@+id/taxRate"
+        android:gravity="right"
+        android:layout_width="fill_parent"
+        android:layout_height="100sp"
+        android:layout_marginTop="100sp"
+        android:text="@string/taxrate_name"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        app:layout_constraintTop_toTopOf="@id/zipCode" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_centerline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".50" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
